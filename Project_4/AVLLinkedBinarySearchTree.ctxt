@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=
+comment0.target=AVLLinkedBinarySearchTree()
+comment0.text=\r\n\ \ \ \ \ Creates\ an\ empty\ binary\ search\ tree.\r\n
+comment1.params=
+comment1.target=boolean\ isEmpty()
+comment2.params=element
+comment2.target=void\ addElement(java.lang.Comparable)
+comment2.text=\r\n\ \ \ \ \ Adds\ the\ specified\ object\ to\ the\ binary\ search\ tree\ in\ the\r\n\ \ \ \ \ appropriate\ position\ according\ to\ its\ key\ value.\ \ Note\ that\r\n\ \ \ \ \ equal\ elements\ are\ added\ to\ the\ right.\ \ Rebalances\ after\ adding.\r\n
+comment3.params=node
+comment3.target=boolean\ rebalance(AVLBinarySearchTreeNode)
+comment4.params=pivot
+comment4.target=void\ rotateLeft(AVLBinarySearchTreeNode)
+comment5.params=node
+comment5.target=int\ treeHeight(AVLBinarySearchTreeNode)
+comment6.params=pivot
+comment6.target=void\ rotateRight(AVLBinarySearchTreeNode)
+comment7.params=targetElement
+comment7.target=java.lang.Comparable\ removeElement(java.lang.Comparable)
+comment7.text=\r\n\ \ \ \ \ Removes\ the\ first\ element\ that\ matches\ the\ specified\ target\r\n\ \ \ \ \ element\ from\ the\ binary\ search\ tree\ and\ returns\ a\ reference\ to\r\n\ \ \ \ \ it.\ \ Returns\ null\ if\ the\ specified\ target\ element\ is\ not\ found.\r\n
+comment8.params=node
+comment8.target=AVLBinarySearchTreeNode\ replacement(AVLBinarySearchTreeNode)
+comment8.text=\r\n\ \ \ \ \ Returns\ a\ reference\ to\ a\ node\ that\ will\ replace\ the\ one\r\n\ \ \ \ \ specified\ for\ removal.\ \ In\ the\ case\ where\ the\ removed\ node\ has\ \r\n\ \ \ \ \ two\ children,\ the\ inorder\ successor\ is\ used\ as\ its\ replacement.\r\n
+comment9.params=
+comment9.target=void\ displayState()
+numComments=10

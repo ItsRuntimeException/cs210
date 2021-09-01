@@ -1,0 +1,121 @@
+(*)Asterisk meaning results may differ after code modification;
+
+BEFORE CODE MODIFICATION: -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+random1.txt
+For file random1.txt of size 26, the number of Selection Sort comparisons is: 325
+For file random1.txt of size 26, the number of Insertion Sort comparisons is: 196
+*For file random1.txt of size 26, the number of Bubble Sort comparisons is: 325
+*For file random1.txt of size 26, the number of Quick Sort comparisons is: 128
+For file random1.txt of size 26, the number of Merge Sort comparisons is: 124
+*Max Memory Use = 52
+
+random2.txt
+For file random2.txt of size 52, the number of Selection Sort comparisons is: 1326
+For file random2.txt of size 52, the number of Insertion Sort comparisons is: 638
+*For file random2.txt of size 52, the number of Bubble Sort comparisons is: 1326
+*For file random2.txt of size 52, the number of Quick Sort comparisons is: 268
+For file random2.txt of size 52, the number of Merge Sort comparisons is: 300
+*Max Memory Use = 104
+
+reverse.txt
+For file reverse.txt of size 26, the number of Selection Sort comparisons is: 325
+For file reverse.txt of size 26, the number of Insertion Sort comparisons is: 350
+*For file reverse.txt of size 26, the number of Bubble Sort comparisons is: 325
+*For file reverse.txt of size 26, the number of Quick Sort comparisons is: 337
+For file reverse.txt of size 26, the number of Merge Sort comparisons is: 124
+*Max Memory Use = 52
+
+sorted.txt
+For file sorted.txt of size 26, the number of Selection Sort comparisons is: 325
+For file sorted.txt of size 26, the number of Insertion Sort comparisons is: 25
+*For file sorted.txt of size 26, the number of Bubble Sort comparisons is: 325
+*For file sorted.txt of size 26, the number of Quick Sort comparisons is: 350
+For file sorted.txt of size 26, the number of Merge Sort comparisons is: 124
+*Max Memory Use = 52
+
+mystery.txt
+For file mystery.txt of size 26, the number of Selection Sort comparisons is: 325
+For file mystery.txt of size 26, the number of Insertion Sort comparisons is: 143
+*For file mystery.txt of size 26, the number of Bubble Sort comparisons is: 325
+*For file mystery.txt of size 26, the number of Quick Sort comparisons is: 122
+For file mystery.txt of size 26, the number of Merge Sort comparisons is: 124
+*Max Memory Use = 52
+
+
+AFTER CODE MODIFICATION: ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+random1.txt
+For file random1.txt of size 26, the number of Selection Sort comparisons is: 325
+For file random1.txt of size 26, the number of Insertion Sort comparisons is: 196
+*For file random1.txt of size 26, the number of Bubble Sort comparisons is: 324
+*For file random1.txt of size 26, the number of Quick Sort comparisons is: 107
+For file random1.txt of size 26, the number of Merge Sort comparisons is: 124
+*Max Memory Use = 26
+
+random2.txt
+For file random2.txt of size 52, the number of Selection Sort comparisons is: 1326
+For file random2.txt of size 52, the number of Insertion Sort comparisons is: 638
+*For file random2.txt of size 52, the number of Bubble Sort comparisons is: 1281
+*For file random2.txt of size 52, the number of Quick Sort comparisons is: 328
+For file random2.txt of size 52, the number of Merge Sort comparisons is: 300
+*Max Memory Use = 52
+
+reverse.txt
+For file reverse.txt of size 26, the number of Selection Sort comparisons is: 325
+For file reverse.txt of size 26, the number of Insertion Sort comparisons is: 350
+*For file reverse.txt of size 26, the number of Bubble Sort comparisons is: 325
+*For file reverse.txt of size 26, the number of Quick Sort comparisons is: 100
+For file reverse.txt of size 26, the number of Merge Sort comparisons is: 124
+*Max Memory Use = 26
+
+sorted.txt
+For file sorted.txt of size 26, the number of Selection Sort comparisons is: 325
+For file sorted.txt of size 26, the number of Insertion Sort comparisons is: 25
+*For file sorted.txt of size 26, the number of Bubble Sort comparisons is: 25
+*For file sorted.txt of size 26, the number of Quick Sort comparisons is: 93
+For file sorted.txt of size 26, the number of Merge Sort comparisons is: 124
+*Max Memory Use = 26
+
+mystery.txt
+For file mystery.txt of size 26, the number of Selection Sort comparisons is: 325
+For file mystery.txt of size 26, the number of Insertion Sort comparisons is: 143
+*For file mystery.txt of size 26, the number of Bubble Sort comparisons is: 247
+*For file mystery.txt of size 26, the number of Quick Sort comparisons is: 276
+For file mystery.txt of size 26, the number of Merge Sort comparisons is: 124
+*Max Memory Use = 26
+
+REPORT: -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+@Selection Sort: on Average O(n^2);
+Based on results size n=26, (26^2)/2 = 338 approximately comparison=325 for most results
+except for random2.txt.
+
+@Insertion Sort: on Average O(n^2);
+Based on results size n=26, best case senario of O(n) is shown on sorted.txt, which comparison=25.
+Other results include 350 on reverse.txt, and 638 random2.txt where (n^2)/2 = (638)/2 = 319,
+approximately close to 350.
+
+@Bubble Sort: on Average O(n^2);
+1. Based on random1.txt, the improved code shows 1 less comparison 325 -> 324.
+2. Based on random2.txt, the improved code shows 1326 comparison to 1281.
+3. Based on reverse.txt, there is no improvement (325 == 325).
+4. Based on sorted.txt and size n=26, best case senario of O(n) is shown in which comparison=25.
+
+@Quick Sort: On Average O(n*log(n));
+$~Space Complexity O(log(n));
+The Quick Sort is improved by breaking out of the outer loop if(!swapped), so less comparisons
+are called knowing that it would be useless to do so. See that the results show large improvement
+on a list that is already sorted, so we don't need to go through as much to try to sort what has
+been already sorted (350 v.s. 93).
+
+@Merge Sort: Best && Average && Worst = O(n*log(n));
+$~Space Complexity Originally: O(2n);
+$~Space Complexity Modified: O(n);
+See the Max Memory Use for every BEFORE and AFTER modification results.
+
+Student: Run Lin
+CLASS:   CS 210
+TERM:    Fall,2016
+
+"Project 3 Report"

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20140826-r5761">
+  <project autorefresh="false" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="AVLTestTree2.java" package="" timestamp="02-Dec-2016 01:51:47">
+        <select from="0" to="0"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="AVLTestTree1.java" package="" timestamp="12-Dec-2016 05:49:51">
+        <select from="0" to="0"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="AVLLinkedBinarySearchTree.java" package="" timestamp="12-Dec-2016 05:56:01">
+        <select from="0" to="0"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="AVLBinarySearchTreeNode.java" package="" timestamp="02-Dec-2016 01:51:45">
+        <select from="0" to="0"/>
+        <scroll column="0" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>

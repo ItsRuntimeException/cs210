@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Corner
+comment0.text=\r\n\ @author\ Bob\ Wilson\r\n\ @version\ 1.0,\ 12/20/2009\r\n\ \r\n\ Corner\ class\ for\ Triangles\ in\ fractal\ pattern\ generation\r\n
+comment1.params=w\ d
+comment1.target=Corner(int,\ int)
+comment2.params=that
+comment2.target=Corner\ mid(Corner)
+comment3.params=that
+comment3.target=int\ len(Corner)
+numComments=4

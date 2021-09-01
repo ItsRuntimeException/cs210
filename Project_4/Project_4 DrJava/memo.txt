@@ -1,0 +1,26 @@
+Q: Does your solution for updating the balance factors preserve the order log n behavior 
+for the addElement and removeElement methods?  If so, explain why.  
+If not, what is the big-O order of those methods now?
+
+A: I made a new treeHeight method to assist myself in doing this project, the treeHeight 
+determines node's height, so to determine the balanceFactor of the pivot, simply call treeHeight
+of the pivot.right minus the treeHeight of pivot.left; The flaw in a height method is that
+by calling another method to determine a balanceFactor, will increase the Big-O of what it was 
+originally was which was O(LogN), but now it would be slightly above O(LogN).
+
+
+
+Q: Suppose that I had given you this project based on keeping an attribute for the height 
+of its sub-tree in each node instead of a balance factor.  Would it be possible to 
+implement an AVL rebalancing strategy on this design?  Explain what might have to be done 
+differently.  (You donÅft need to write any code for this alternative solution ? 
+just explain the possible differences.)
+
+A: The short answer is no, but the long answer is because the fact that how important 
+balanceFactor play a role in this design is the whole point of this project in the first place.
+without the balanceFactor and just the height alone, there is nothing to compareTo.
+BUT if height were to expressed as positive and negatives, then the height is basically
+balanceFactor in the meaning that this node's balanceFactor equal to (this node's
+right node height) minus (this node's left node height).
+
+node.balanceFactor = height(node.right) - height(node.left);

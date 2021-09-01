@@ -1,0 +1,261 @@
+import java.util.*;
+
+public class Polynomial implements Comparable<Polynomial>
+{
+    private ArrayList<Integer> coefficients = new ArrayList<Integer>();
+    private int size;
+    public Polynomial() //default constructor.
+    {
+    }
+    public Polynomial(int c1)
+    {
+        coefficients.add(c1);
+        size = coefficients.size();
+    }
+    public Polynomial(int c1, int c2)
+    {
+        coefficients.add(c1);
+        coefficients.add(c2);
+        size = coefficients.size();
+    }
+    public Polynomial(int c1, int c2, int c3)
+    {
+        coefficients.add(c1);
+        coefficients.add(c2);
+        coefficients.add(c3);
+        size = coefficients.size();
+    }
+    public Polynomial(int c1, int c2, int c3, int c4)
+    {
+        coefficients.add(c1);
+        coefficients.add(c2);
+        coefficients.add(c3);
+        coefficients.add(c4);
+        size = coefficients.size();
+    }
+    public Polynomial(int c1, int c2, int c3, int c4, int c5)
+    {
+        coefficients.add(c1);
+        coefficients.add(c2);
+        coefficients.add(c3);
+        coefficients.add(c4);
+        coefficients.add(c5);
+        size = coefficients.size();
+    }
+    public Polynomial(int c1, int c2, int c3, int c4, int c5, int c6)
+    {
+        coefficients.add(c1);
+        coefficients.add(c2);
+        coefficients.add(c3);
+        coefficients.add(c4);
+        coefficients.add(c5);
+        coefficients.add(c6);
+        size = coefficients.size();
+    }
+    
+    public int compareTo(Polynomial that)
+    {
+        if (that.coefficients.size() > this.coefficients.size())
+        {return -1;}
+        else if (that.coefficients.size() < this.coefficients.size())
+        {return 1;}
+        else
+        {
+            for (int i = this.coefficients.size()-1; i >= 0; i--)
+            {
+                if (that.coefficients.get(i) > this.coefficients.get(i))
+                {
+                    return -1;
+                }
+                else if (that.coefficients.get(i) < this.coefficients.get(i))
+                {
+                    return 1;
+                }
+            }
+            return 0;
+        }
+    }    
+    public boolean equals(Polynomial that)
+    {
+        if (this.compareTo(that) == 0)
+            return true;
+        else
+            return false;
+    }
+    
+    public double evaluate(double n)
+    {
+        double e=0;
+        for (int i = this.coefficients.size()-1; i >= 0; i--)
+        {
+            e+= this.coefficients.get(i) * Math.pow(n,i); // Math.pow(base, exponent);
+        }
+        return e;
+    }
+    public Polynomial plus(Polynomial that)
+    {
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        Polynomial p = new Polynomial();
+        if (this.size <= that.size)
+        {
+            for (int i = 0; i < that.coefficients.size(); i++)
+            {
+                if (i < this.coefficients.size())
+                    a.add(this.coefficients.get(i) + that.coefficients.get(i));
+                else
+                    a.add(that.coefficients.get(i));
+            }
+        }
+        else // this > that
+        {
+            for (int i = 0; i < this.coefficients.size(); i++)
+            {
+                if (i < that.coefficients.size())
+                    a.add(this.coefficients.get(i) + that.coefficients.get(i));
+                else
+                    a.add(this.coefficients.get(i));
+            }
+        }
+        p.coefficients = a;
+        p.size = a.size();
+        return p;
+    }
+    public Polynomial minus(Polynomial that)
+    {
+        ArrayList<Integer> m = new ArrayList<Integer>();
+        Polynomial p = new Polynomial();
+        if (this.size <= that.size)
+        {
+            for (int i = 0; i < that.coefficients.size(); i++)
+            {
+                if (i < this.coefficients.size())
+                    m.add(this.coefficients.get(i) - that.coefficients.get(i));
+                else
+                    m.add(-that.coefficients.get(i));
+            }
+        }
+        else // this > that
+        {
+            for (int i = 0; i < this.coefficients.size(); i++)
+            {
+                if (i < that.coefficients.size())
+                    m.add(this.coefficients.get(i) - that.coefficients.get(i));
+                else
+                    m.add(this.coefficients.get(i));
+            }
+        }
+        p.coefficients = m;
+        p.size = m.size();
+        return p;
+    }
+    public Polynomial multiply(Polynomial that)
+    {
+        ArrayList<Integer> mm = new ArrayList<Integer>();
+        Polynomial p = new Polynomial();
+        if (this.size == 2 || that.size == 2)
+        {
+            if (that.size == 2 && this.size == 2) // bi-nomial * bi-nomial = ONE tri-nomial.
+            {
+                return new Polynomial(this.coefficients.get(0)*that.coefficients.get(0),
+                               this.coefficients.get(1)*that.coefficients.get(0)+this.coefficients.get(0)*that.coefficients.get(1),
+                               this.coefficients.get(1)*that.coefficients.get(1));
+            }
+            else if ((that.size == 2 && this.size == 3) || (that.size == 3 && this.size == 2))
+            {
+                if (this.compareTo(that) == 1) // that.coefficients.size() < this.coefficients.size()
+                {
+                    mm.add(this.coefficients.get(this.coefficients.size()-1)*that.coefficients.get(1));
+                    for (int i = this.coefficients.size()-1; i >= 0; i--)
+                    {
+                        if (i == 0)
+                        {
+                            mm.add(this.coefficients.get(0)*that.coefficients.get(0));
+                        }
+                        else
+                        {
+                            mm.add(this.coefficients.get(this.coefficients.size()/2)*that.coefficients.get(0) + this.coefficients.get((this.coefficients.size()/2)-1)*that.coefficients.get(1));
+                        }
+                    }
+                }
+            }
+        }
+        p.coefficients = mm;
+        p.size = mm.size();
+        return p;
+    }
+    public Polynomial[] divide(Polynomial that)
+    {
+        Polynomial d [] = new Polynomial[2];
+        Polynomial p = new Polynomial(0); //default.
+        
+        if (this.size == 2 || that.size == 2)
+        {
+            if (that.coefficients.size() > this.coefficients.size())
+            {
+                d[0] = p;
+                d[1] = this; // remainder.
+            }
+            else
+            {
+                d[0] = new Polynomial(this.coefficients.get(0)/that.coefficients.get(0), 
+                                      this.coefficients.get(this.size-1)/that.coefficients.get(that.size-1));
+                d[1] = p;
+            }
+        }
+        return d;
+    }
+    
+    public Polynomial derivative()
+    {
+        ArrayList<Integer> dx = new ArrayList<Integer>();
+        Polynomial p = new Polynomial();
+        
+        if (this.coefficients.size() == 1)
+        {
+            return new Polynomial(0);
+        }
+        else
+        {
+            for (int i = this.coefficients.size()-1; i > 0; i--)
+            {
+                dx.add(i*this.coefficients.get(i));
+            }
+        }
+        p.coefficients = dx;
+        p.size = dx.size();
+        return p;
+    }
+    
+    public double root(double num, double tolerance, int range)
+    {
+        return (double)1; // dummy-code.
+    }
+    
+    public String toString()
+    {
+        String s = "";
+        int i = coefficients.size()-1;
+        do
+        {
+            if (this.coefficients.get(i) < 0)
+            {
+                if (i != this.coefficients.size()-1)   
+                    s += " ";
+                //s += "-";
+                s += this.coefficients.get(i) + "x^" + (Integer)(i);
+            }
+            else if (this.coefficients.get(i) > 0)
+            {
+                if (i != this.coefficients.size()-1)   
+                    s += " +";
+                s += this.coefficients.get(i) + "x^" + (Integer)(i);
+            }
+            else if (this.coefficients.get(i) == 0)
+            {
+                ;
+            }
+            i--;
+        }while(i+1 > 0);
+        return s;
+    }
+}

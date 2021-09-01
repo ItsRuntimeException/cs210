@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Stack_Iterative
+comment0.text=\r\n\ @author\ Bob\ Wilson\ @version\ 1.0,\ 12/20/2009\r\n\ Applet\ with\ fractal\ pattern\ repetition\ using\ iterative\ drawing\ of\ triangles\ within\ triangles\r\n
+comment1.params=screen
+comment1.target=void\ paint(java.awt.Graphics)
+comment1.text=\r\n\ \r\n
+comment2.params=screen\ t
+comment2.target=void\ drawTriangle(java.awt.Graphics,\ Triangle)
+comment2.text=\r\n\ iterative\ version\ of\ drawing\ Note\:\ It\ can\ work\ with\ either\ stack\ or\ queue\ for\ saving\ triangles\ in\ five\ places\ in\ the\ code\ below\:\ comment/uncomment\ one\ or\ the\ other\ ***\ The\ only\ difference\ is\ in\ the\ order\ that\ sub-triangles\ are\ drawn.\r\n
+numComments=3
