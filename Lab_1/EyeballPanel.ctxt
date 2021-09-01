@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=
+comment0.target=EyeballPanel()
+comment0.text=\r\n\ Default\ constructor\r\n
+comment1.params=num\ eyeSize
+comment1.target=EyeballPanel(int,\ int)
+comment1.text=\r\n\ Constructs\ a\ panel\ with\ roving\ eyeballs\r\n
+comment2.params=e
+comment2.target=void\ mouseMoved(java.awt.event.MouseEvent)
+comment3.params=e
+comment3.target=void\ componentResized(java.awt.event.ComponentEvent)
+comment4.params=g
+comment4.target=void\ paint(java.awt.Graphics)
+comment4.text=\r\n\ Draw\ all\ eyeballs\r\n
+comment5.params=
+comment5.target=void\ initEyes()
+comment5.text=\r\n\ Build\ the\ eye\ objects.\ \ Each\ eye\ is\ placed\ in\ a\ random\ grid\ position.\r\n
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+comment6.text=\r\n\ Tests\ the\ panel\ by\ running\ it\ in\ a\ JFrame\r\n
+numComments=7

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=x\ y\ eyeSize
+comment0.target=Eye(int,\ int,\ int)
+comment0.text=\r\n\ Constructs\ a\ roving\ eyeball\r\n\ @param\ x\ Grid\ position\ x\r\n\ @param\ y\ Grid\ position\ y\r\n\ @param\ eyeSize\ diameter\ of\ the\ eyeball\r\n
+comment1.params=g\ mousex\ mousey
+comment1.target=void\ draw(java.awt.Graphics,\ int,\ int)
+comment1.text=\r\n\ Draw\ the\ eyeball\ with\ pupil\ position\ based\ on\ mouse\ location.\r\n\ @param\ g\ Graphics\ context\ to\ draw\ on\r\n\ @param\ mousex\ Mouse\ X\ position\r\n\ @param\ mousey\ Mouse\ Y\ position\r\n
+numComments=2
