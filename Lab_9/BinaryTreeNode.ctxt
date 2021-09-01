@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=obj
+comment0.target=BinaryTreeNode(java.lang.Object)
+comment0.text=\r\n\ \ \ \ \ Creates\ a\ new\ tree\ node\ with\ the\ specified\ data.\r\n
+comment1.params=
+comment1.target=int\ numChildren()
+comment1.text=\r\n\ \ \ \ \ Returns\ the\ number\ of\ non-null\ children\ of\ this\ node.\r\n\ \ \ \ \ This\ method\ may\ be\ able\ to\ be\ written\ more\ efficiently.\r\n
+comment2.params=left
+comment2.target=void\ setLeftChild(BinaryTreeNode)
+comment3.params=
+comment3.target=BinaryTreeNode\ getLeftChild()
+comment4.params=right
+comment4.target=void\ setRightChild(BinaryTreeNode)
+comment5.params=
+comment5.target=BinaryTreeNode\ getRightChild()
+comment6.params=
+comment6.target=java.lang.Object\ getElement()
+numComments=7

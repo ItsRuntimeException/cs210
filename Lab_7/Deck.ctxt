@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Deck()
+comment0.text=\ <p>the\ constructor\ method\ instantiates\ the\ deck\ with\ 20\ cards\r\n\ in\ a\ pseudo-random\ order.\ \ It\ takes\ no\ parameters.</p>\r\n
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment1.text=\ <p>tostring\ method\ returns\ a\ list\ of\ the\ cards\ in\ the\ deck\ in\ order.</p>\r\n\ @return\ a\ string\ containing\ all\ of\ the\ card\ values\ and\ suits\ in\ order\r\n
+comment2.params=
+comment2.target=void\ sort()
+comment2.text=\ <p>sort\ method\ performs\ a\ radix\ sort\ on\ the\ cards\ by\ value\ and\ suit.</p>\r\n
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+comment3.text=\ <p>test\ main\ method\ for\ this\ class.</p>\r\n\ @param\ not\ used\r\n
+numComments=4

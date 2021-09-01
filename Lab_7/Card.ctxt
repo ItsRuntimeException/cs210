@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=value\ suit
+comment0.target=Card(java.lang.String,\ java.lang.String)
+comment0.text=\ <p>the\ constructor\ method\ instantiates\ the\ card.</p>\r\n\ @param\ the\ String\ value\ of\ the\ card,\ e.g.\ "Ace",\ "King",\ etc.\r\n\ @param\ the\ String\ value\ of\ the\ suit,\ e.g.\ "Spades",\ "Hearts",\ etc.\r\n
+comment1.params=
+comment1.target=int\ getValue()
+comment1.text=\ <p>get\ the\ value\ of\ the\ card.</p>\r\n\ @\ return\ the\ integer\ value\ of\ the\ card\ (0\ to\ NBR_VALUES\ -\ 1)\r\n\ @param\ not\ used\r\n
+comment2.params=
+comment2.target=int\ getSuit()
+comment2.text=\ <p>get\ the\ suit\ of\ the\ card.</p>\r\n\ @\ return\ the\ integer\ suit\ of\ the\ card\ (0\ to\ NBR_SUITS\ -\ 1)\r\n\ @param\ not\ used\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\ <p>tostring\ method\ returns\ the\ value\ and\ suit\ of\ the\ card.</p>\r\n\ @return\ a\ string\ containing\ the\ value\ and\ the\ suit\ of\ the\ card.\r\n
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment4.text=\ <p>test\ main\ method\ for\ this\ class.</p>\r\n\ @param\ not\ used\r\n
+numComments=5
