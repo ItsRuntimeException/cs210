@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TestSolver()
+comment1.params=
+comment1.target=void\ test2RealRoots()
+comment2.params=
+comment2.target=void\ test2ImaginaryRoots()
+comment3.params=
+comment3.target=void\ testOnly1Root()
+comment4.params=
+comment4.target=void\ testLinear()
+comment5.params=
+comment5.target=void\ testNoSolution()
+comment6.params=
+comment6.target=void\ testAnySolution()
+numComments=7
